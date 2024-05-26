@@ -1,5 +1,4 @@
 
-# The example function below keeps track of the opponent's history and plays whatever the opponent played two plays ago. It is not a very good player so you will need to change the code to pass the challenge.
 
 import random
 
@@ -10,7 +9,7 @@ def player(prev_play="", opponent_history=[], name_history=[], my_history=[], pl
     iter = len(opponent_history)
     ideal_response = {'P': 'S', 'R': 'P', 'S': 'R'}
 
-    #RESET AFTER 1000
+    #Reset after 1000
     if iter == 1001:
       opponent_history.clear()
       opponent_history.append(prev_play)
@@ -18,7 +17,6 @@ def player(prev_play="", opponent_history=[], name_history=[], my_history=[], pl
       name_history.append('')
       my_history.clear()
 
-    #FIND BOT IN 3 TURNS USING ITS CODE
     if iter <= 4:
 
       if iter == 1:
